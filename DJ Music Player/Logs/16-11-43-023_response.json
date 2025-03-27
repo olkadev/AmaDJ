@@ -1,0 +1,9 @@
+https://api.figma.com/v1/oauth/token
+
+{
+    "user_id": 1450867390992890116,
+    "access_token": "figu_3alBsTsL-UyvUlL9qO2UMpS02vVGdekGZ5t2bwcO",
+    "token_type": "bearer",
+    "refresh_token": "figur_RNPFSJ_s-urQce8KJNgVoOyzKgwonMXroOkk11thiwSTIglmRuij6g",
+    "expires_in": 7776000
+}
