@@ -1,9 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="EscapeManager">
-			<method name="DeleteAllSongsBtn"/>
-			<method name="ModifyCrossFadeTime"/>
-			<method name="ModifyFadeTime"/>
+		<type fullname="Goodbye">
 			<method name="QuitApplicationBtn"/>
 		</type>
 		<type fullname="MenusManager">
@@ -14,6 +11,7 @@
 			<method name="ToggleConfirmationCanvas"/>
 			<method name="ToggleConfirmationCanvas"/>
 			<method name="ToggleConfirmationCanvas"/>
+			<method name="ToggleEscapeMenu"/>
 			<method name="ToggleEscapeMenu"/>
 			<method name="ToggleEscapeMenu"/>
 			<method name="ToggleImportSongMenu"/>
@@ -33,8 +31,13 @@
 			<method name="ImportMusicFileBtn"/>
 			<method name="SaveMusicBtn"/>
 		</type>
-		<type fullname="ScreenMode">
+		<type fullname="ScreenManager">
 			<method name="ToggleScreenMode"/>
+		</type>
+		<type fullname="SettingsManager">
+			<method name="DeleteAllSongsBtn"/>
+			<method name="ModifyCrossFadeTime"/>
+			<method name="ModifyFadeTime"/>
 		</type>
 		<type fullname="SFXButton">
 			<method name="PlayButtonSound"/>
@@ -50,9 +53,14 @@
 		</type>
 		<type fullname="Song">
 			<method name="DeleteBtn"/>
+			<method name="DeleteBtn"/>
+			<method name="DeleteButtonToggle"/>
 			<method name="DeleteButtonToggle"/>
 			<method name="EditBtn"/>
+			<method name="EditBtn"/>
 			<method name="PlayNowButton"/>
+			<method name="PlayNowButton"/>
+			<method name="QueueUpButton"/>
 			<method name="QueueUpButton"/>
 		</type>
 		<type fullname="SongManager">

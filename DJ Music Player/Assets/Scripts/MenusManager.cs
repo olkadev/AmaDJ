@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -9,10 +10,16 @@ public class MenusManager : MonoBehaviour
     [SerializeField] private GameObject autoplayTagBar;
     [SerializeField] private GameObject escapeMenu;
     [SerializeField] private GameObject goodbyeCanvas;
+    [SerializeField] private GameObject welcomeCanvas;
     [SerializeField] private GameObject confirmationCanvas;
     [Header("Input Field References")] 
     [SerializeField] private TMP_InputField searchInputField;
     [SerializeField] private TMP_InputField autoplayInputField;
+
+    private void Start()
+    {
+        welcomeCanvas.SetActive(true);
+    }
 
     public void ToggleAutoplayTagBar()
     {
@@ -38,6 +45,7 @@ public class MenusManager : MonoBehaviour
     
     public void ToggleEscapeMenu()
     {
+        if (Goodbye.IsQuitting || Welcome.IsLoading) return;
         escapeMenu.SetActive(!escapeMenu.activeSelf);
         goodbyeCanvas.SetActive(!goodbyeCanvas.activeSelf);
         SFXButtonManager.IgnoreSoundEffectHotkeys = escapeMenu.activeSelf;

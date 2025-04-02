@@ -19,16 +19,17 @@ public class SongManager : MonoBehaviour
     private List<Song> songs = new List<Song>();
     private AudioClip audioClip;
     private static bool isNameSorted;
-    private static int sortMode;                                                                                        // 1 for Name A-Z with minus being Z-A, 2 for Author, 3 for Tag
+    public static int SortMode;                                                                                        // 1 for Name A-Z with minus being Z-A, 2 for Author, 3 for Tag
     private int indexCounter;
     private int emptyIndex;
     private int totalMusic;
+    public int TotalMusic => totalMusic;
 
     public List<Song> Songs => songs;
     
     private void Start()
     {
-        sortMode = 1;
+        SortMode = 1;
         HandleSorting();
         
         totalMusic = PlayerPrefs.GetInt("TotalMusic");
@@ -40,31 +41,31 @@ public class SongManager : MonoBehaviour
     
     public void SortByNameBtn()
     {
-        if (!(sortMode == 1 || sortMode == -1))
+        if (!(SortMode == 1 || SortMode == -1))
         {
-            sortMode = -1;
+            SortMode = -1;
         }
-        sortMode = -sortMode ;
+        SortMode = -SortMode ;
         HandleSorting();
     }
     
     public void SortByAuthorBtn()
     {
-        if (!(sortMode == 2 || sortMode == -2))
+        if (!(SortMode == 2 || SortMode == -2))
         {
-            sortMode = -2;
+            SortMode = -2;
         }
-        sortMode = -sortMode;
+        SortMode = -SortMode;
         HandleSorting();
     }
     
     public void SortByTagBtn()
     {
-        if (!(sortMode == 3 || sortMode == -3))
+        if (!(SortMode == 3 || SortMode == -3))
         {
-            sortMode = -3;
+            SortMode = -3;
         }
-        sortMode = -sortMode;
+        SortMode = -SortMode;
         HandleSorting();
     }
     
@@ -74,9 +75,9 @@ public class SongManager : MonoBehaviour
     {
         foreach (var _song in displaySongs)
         {
-            if (_song.Music.NameText.ToLower().Contains(searchBarText.text.ToLower()) 
-                || _song.Music.AuthorText.ToLower().Contains(searchBarText.text.ToLower()) 
-                || _song.Music.TagText.ToLower().Contains(searchBarText.text.ToLower()))
+            if (_song.Music.NameText.ToLower().Contains(searchBarText.text.ToLower().Trim()) ||
+                _song.Music.AuthorText.ToLower().Contains(searchBarText.text.ToLower().Trim()) ||
+                _song.Music.TagText.ToLower().Contains(searchBarText.text.ToLower().Trim()))
             {
                 _song.gameObject.SetActive(true);
             }
@@ -112,7 +113,7 @@ public class SongManager : MonoBehaviour
     private void HandleSorting()
     {
         displaySongs = songs;
-        switch (sortMode)
+        switch (SortMode)
         {
             case 1: // Name A-Z
                 displaySongs = displaySongs.OrderBy(_song => _song.Music.NameText, StringComparer.InvariantCultureIgnoreCase).ToList();
@@ -162,7 +163,7 @@ public class SongManager : MonoBehaviour
                 break;
             
             default:
-                sortMode = 1;
+                SortMode = 1;
                 break;
         }
     }

@@ -21,7 +21,6 @@ public class MusicPlayer : MonoBehaviour
     [Header("Slider References")]
     [SerializeField] private Slider musicBar;
     [SerializeField] private Slider fadeBar;
-    // [SerializeField] private TMP_Text errorText;
     [Header("Customization")]
     public static float CrossFadeTime;
     public static float FadeTime;
@@ -44,6 +43,7 @@ public class MusicPlayer : MonoBehaviour
     private float maxSecond;
     private float maxMinute;
 
+    public bool IsPaused => isPaused;
     public bool IsFading => isFading;
     public bool IsLooping => isLooping;
     public Music Music => music;
@@ -68,10 +68,17 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        CrossFadeTime = 6;
-        FadeTime = 3;
         CrossFadeTime = PlayerPrefs.GetFloat("CrossFadeTime");
         FadeTime = PlayerPrefs.GetFloat("FadeTime");
+        
+        if (PlayerPrefs.GetFloat("CrossFadeTime") == 0)
+        {
+            CrossFadeTime = 6;
+        }
+        if (PlayerPrefs.GetFloat("FadeTime") == 0)
+        {
+            FadeTime = 3;
+        }
     }
 
     private void Update()
@@ -82,6 +89,8 @@ public class MusicPlayer : MonoBehaviour
             currentMusicSource.time = currentMusicSource.clip.length - 8f;
         }
         // DEBUG
+
+        HotkeyHandler();
         
         UpdateQueueText();
         UpdateMusicDuration();
@@ -93,7 +102,7 @@ public class MusicPlayer : MonoBehaviour
     {
         foreach (var _song in songManager.Songs)
         {
-            if (string.Equals(_song.Music.TagText, autoplayInputField.text, StringComparison.InvariantCultureIgnoreCase))
+            if (string.Equals(_song.Music.TagText, autoplayInputField.text.Trim(), StringComparison.InvariantCultureIgnoreCase))
             {
                 autoplaySongs.Add(_song);
                 hasAutoplaySong = true;
@@ -127,7 +136,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void SkipToQueued()
     {
-        if (nextMusic == null || music == nextMusic || isFading) return;
+        if (nextMusic == null || isFading) return;
         StartCoroutine(Crossfade(nextMusic.MusicClip));
     }
     
@@ -136,11 +145,11 @@ public class MusicPlayer : MonoBehaviour
         isAutoplaying = !isAutoplaying;
         if (isAutoplaying)
         {
-            autoplayButton.image.color = Color.green;
+            autoplayButton.Select();
         }
         else
         {
-            autoplayButton.image.color = Color.white;
+            autoplayButton.OnDeselect(null);
         }
     }
     
@@ -151,40 +160,38 @@ public class MusicPlayer : MonoBehaviour
         
         if (isLooping)
         {
-            loopButton.image.color = Color.green;
+            loopButton.Select();
             if (isAutoplaying)
             {
                 isAutoplaying = false;
                 nextMusic = null;
-                autoplayButton.image.color = Color.white;
+                autoplayButton.OnDeselect(null);
             }
         }
         else
         {
-            loopButton.image.color = Color.white;
+            loopButton.OnDeselect(null);
+        }
+    }
+
+    #endregion
+
+    #region Hotkeys
+    
+    private void HotkeyHandler()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ToggleMusic();
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.P))
+        {
+            SkipToQueued();
         }
     }
     
-    // public void DismissErrorBtn()
-    // {
-    //     errorText.text = string.Empty;
-    // }
-
     #endregion
-    
-    // private void ControlHotKeys()
-    // {
-    //     if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.LeftArrow))
-    //     {
-    //         currentMusicSource.time = 0;
-    //         if (isFading) return;                                                                                       // just in case
-    //         StartCoroutine(FadeIn());
-    //     }
-    //     else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.RightArrow))
-    //     {
-    //         SkipToQueued();
-    //     }
-    // }
     
     private void ChooseAutoplaySong()
     {

@@ -22,10 +22,8 @@ public class Song : MonoBehaviour
     [SerializeField] private Button deleteButton;
 
     private bool isBtnActive = false;
-    
-    private Music music;
+
     private MusicPlayer musicPlayer;
-    private AudioClip audioClip;
     private SongManager songManager;
     private int songIndex;
 
@@ -38,16 +36,9 @@ public class Song : MonoBehaviour
         songIndex = _index;
     }
     
-    public AudioClip AudioClip
-    {
-        get => audioClip;
-        set => audioClip = value;
-    }
-    public Music Music
-    {
-        get => music;
-        set => music = value;
-    }
+    public AudioClip AudioClip { get; set; }
+
+    public Music Music { get; set; }
 
     public void SongManagerInit(SongManager _songManager)
     {
@@ -69,23 +60,23 @@ public class Song : MonoBehaviour
     
     public void PlayNowButton()
     {
-        if (musicPlayer.IsFading || musicPlayer.Music == music) return;
+        if (musicPlayer.IsFading) return;
         if (musicPlayer.Music == null)
         {
-            musicPlayer.InitSongMusic(music);
-            musicPlayer.StartMusic(music);
+            musicPlayer.InitSongMusic(Music);
+            musicPlayer.StartMusic(Music);
         }
         else
         {
-            musicPlayer.InitNextSongMusic(music);
-            StartCoroutine(musicPlayer.Crossfade(music.MusicClip));
+            musicPlayer.InitNextSongMusic(Music);
+            StartCoroutine(musicPlayer.Crossfade(Music.MusicClip));
         }
     }
     
     public void QueueUpButton()
     {
-        if (musicPlayer.IsLooping) return;
-        musicPlayer.InitNextSongMusic(music);
+        if (musicPlayer.IsLooping || musicPlayer.IsFading) return;
+        musicPlayer.InitNextSongMusic(Music);
     }
 
     public void EditBtn()
@@ -93,22 +84,20 @@ public class Song : MonoBehaviour
         if (isBtnActive)
         {
             ToggleEditMode(false);
-            editButton.GetComponentInChildren<TMP_Text>().text = "Edit";
             
             if (!string.IsNullOrEmpty(nameInputField.text))
             {
-                music.NameText = nameInputField.text;
+                Music.NameText = nameInputField.text;
             }
-            music.AuthorText = authorInputField.text;
-            music.TagText = tagInputField.text;
+            Music.AuthorText = authorInputField.text;
+            Music.TagText = tagInputField.text;
 
             UpdateSongInformation();
-            SaveSystem.EditMusic(music, songIndex);
+            SaveSystem.EditMusic(Music, songIndex);
         }
         else
         {
             ToggleEditMode(true);
-            editButton.GetComponentInChildren<TMP_Text>().text = "Confirm";
             nameInputField.text = nameText.text;
             authorInputField.text = authorText.text;
             tagInputField.text = tagText.text;
@@ -117,7 +106,7 @@ public class Song : MonoBehaviour
 
     public void DeleteBtn()
     {
-        if (musicPlayer.Music == music) return;
+        if (musicPlayer.Music == Music) return;
         string _currentFilePath = Path.Combine(Music.MusicClipPath);
         File.Delete(_currentFilePath);
         _currentFilePath = Path.Combine(Application.persistentDataPath, songIndex.ToString("000") + ".mdat");
@@ -151,18 +140,18 @@ public class Song : MonoBehaviour
     
     private void UpdateSongInformation()
     {
-        nameText.text = music.NameText;
-        authorText.text = music.AuthorText ?? null;
-        tagText.text = music.TagText ?? null;
+        nameText.text = Music.NameText;
+        authorText.text = Music.AuthorText ?? null;
+        tagText.text = Music.TagText ?? null;
     }
     
     private IEnumerator WaitForMusicClipRoutine()
     {
-        yield return new WaitUntil(() => music.MusicClip);
+        yield return new WaitUntil(() => Music.MusicClip);
         UpdateSongInformation();
 
-        float _maxMinute = Mathf.FloorToInt(music.MusicClip.length / 60f);
-        float _maxSecond = Mathf.FloorToInt(music.MusicClip.length % 60f);
+        float _maxMinute = Mathf.FloorToInt(Music.MusicClip.length / 60f);
+        float _maxSecond = Mathf.FloorToInt(Music.MusicClip.length % 60f);
         durationText.text = $"{_maxMinute}:{_maxSecond.ToString("00")}";
     }
 }

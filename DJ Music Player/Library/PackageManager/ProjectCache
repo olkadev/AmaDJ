@@ -5,143 +5,76 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638767842186788892
-    m_Hash: 593471534
+      ticks: 638791251502715108
+    m_Hash: 2421031023
   m_LockFileStatus:
     m_FilePath: C:/Projects/DJ Music Player/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638767842186839287
-    m_Hash: 397703333
+      ticks: 638791251502750193
+    m_Hash: 1417422288
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
-  m_LocalFileStatus: []
+  m_LocalFileStatus:
+  - m_FilePath: C:\Users\olibu\Downloads\Packages\src/package.json
+    m_PathExists: 1
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 638787502300000000
+    m_Hash: 4250130571
+  - m_FilePath: C:\Users\olibu\Downloads\Packages\src
+    m_PathExists: 1
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 0
+    m_Hash: 0
 m_ProjectPath: C:/Projects/DJ Music Player/Packages
 m_EditorVersion: 6000.0.40f1 (157d81624ddf)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@2.7.1
+- packageId: com.coffee.softmask-for-ugui@file:C:\Users\olibu\Downloads\Packages\src
   testable: 0
   isDirectDependency: 1
-  version: 2.7.1
-  source: 1
-  resolvedPath: C:\Projects\DJ Music Player\Library\PackageCache\com.unity.collab-proxy@50ac96531b63
-  assetPath: Packages/com.unity.collab-proxy
-  name: com.unity.collab-proxy
-  displayName: Version Control
+  version: 3.3.0
+  source: 4
+  resolvedPath: C:\Users\olibu\Downloads\Packages\src
+  assetPath: Packages/com.coffee.softmask-for-ugui
+  name: com.coffee.softmask-for-ugui
+  displayName: UI Soft Mask
   author:
-    name: 
-    email: 
-    url: 
-  category: Editor
+    name: mob-sakai
+    email: sakai861104@gmail.com
+    url: https://github.com/mob-sakai
+  category: 
   type: 
-  description: The package gives you the ability to use Unity Version Control in
-    the Unity editor. To use Unity Version Control, a subscription is required. Learn
-    more about how you can get started for free by visiting https://unity.com/solutions/version-control
+  description: 'UI Soft Mask is a smooth masking component for Unity UI (uGUI) elements.
+
+    By
+    using SoftMask instead of the default Mask component, you can beautifully represent
+    the rounded edges of UI elements.'
   errors: []
   versions:
-    all:
-    - 1.2.3-preview
-    - 1.2.4-preview
-    - 1.2.6
-    - 1.2.7
-    - 1.2.9
-    - 1.2.11
-    - 1.2.15
-    - 1.2.16
-    - 1.2.17-preview.3
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.9
-    - 1.5.7
-    - 1.6.0
-    - 1.7.1
-    - 1.8.0
-    - 1.9.0
-    - 1.10.2
-    - 1.11.2
-    - 1.12.5
-    - 1.13.5
-    - 1.14.1
-    - 1.14.4
-    - 1.14.7
-    - 1.14.9
-    - 1.14.12
-    - 1.14.13
-    - 1.14.15
-    - 1.14.16
-    - 1.14.17
-    - 1.14.18
-    - 1.15.1
-    - 1.15.4
-    - 1.15.7
-    - 1.15.9
-    - 1.15.12
-    - 1.15.13
-    - 1.15.15
-    - 1.15.16
-    - 1.15.17
-    - 1.15.18
-    - 1.17.0
-    - 1.17.1
-    - 1.17.2
-    - 1.17.6
-    - 1.17.7
-    - 2.0.0-preview.6
-    - 2.0.0-preview.8
-    - 2.0.0-preview.15
-    - 2.0.0-preview.17
-    - 2.0.0-preview.20
-    - 2.0.0-preview.21
-    - 2.0.0-preview.22
-    - 2.0.0
-    - 2.0.1
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
-    - 2.2.0
-    - 2.3.1
-    - 2.4.3
-    - 2.4.4
-    - 2.5.1
-    - 2.5.2
-    - 2.6.0
-    - 2.7.1
-    compatible:
-    - 2.7.1
-    recommended: 2.7.1
+    all: []
+    compatible: []
+    recommended: 
     deprecated: []
-  dependencies: []
-  resolvedDependencies: []
+  dependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.ugui
+    version: 2.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
   keywords:
-  - backup
-  - cloud
-  - collab
-  - collaborate
-  - collaboration
-  - control
-  - devops
-  - plastic
-  - plasticscm
-  - source
-  - team
-  - teams
-  - version
-  - vcs
-  - uvcs
+  - ui
+  - softmask
   registry:
     id: main
     name: 
@@ -152,18 +85,18 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   entitlements:
-    licensingModel: 1
+    licensingModel: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 638751271186710000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.7/manual/index.html
+  datePublishedTicks: 0
+  documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: cf9c21f84be18cbe2d6a93ec7cfbeb01b4310bbe
+    url: git+https://github.com/mob-sakai/SoftMaskForUGUI.git
+    revision: 
     path: 
   unityLifecycle:
-    version: 2.7.1
+    version: 
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -173,38 +106,14 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: "{\"changelog\":\"### Added\\n\\n- You can now Shelve your selected
-    Pending Changes, inspect the shelves content, and apply them to your workspace.\\n-
-    You can now Shelve your Pending Changes when switching to another branch (or
-    changeset) and decide if you want to apply them automatically after the switch.\\n-
-    You can now create a code review from the list of branches (or changesets) opening
-    either the Desktop App or the Unity Cloud website.\\n\\n### Changed\\n\\n- Serialize
-    the Checkin comment and tick selection so they are kept on any domain reload
-    and play mode.\\n- Optimized incoming changes & merge to only reload the Package
-    Manager when needed.\\n- Added dedicated toolbar buttons to open the list of
-    branches and the Branch Explorer of the Desktop App.\\n- Reworded the changeset
-    context menu \\\"Undo this change\\\" to \\\"Revert this file to the previous
-    revision\\\" so it\u2019s more explicit.\\n- Moved the 'Unity Version Control'
-    menu item under 'Window'/'Version Control' submenu starting from Unity 6.1.\\n-
-    Improve the Create workspace window to suggest the matching Unity Cloud project
-    if it exists.\\n\\n### Fixed\\n\\n- Ensured ignore.conf is not being reformatted
-    when adding or removing an ignore rule, so it keeps empty lines and comments.\\n-
-    Fixed missing checked-out for renamed assets.\\n- Fixed rename asset leaves 'Added'
-    + 'Remove locally' status instead of 'Moved'.\\n- Fixed console error GUI Error:
-    Invalid GUILayout state in PlasticWindow view which is caused under some circumstances.\\n-
-    Fixed null exception on entering in Play Mode before creating the workspace.\\n-
-    Fixed lock statuses to correctly refresh in Project View and Inspector after
-    merging.\\n- Fixed a performance issue by preventing the ConfigureLogging call
-    on every domain reload when Unity Version Control is not used, reducing the load
-    time by ~200ms. .\\n- Fixed the create branch operation to work in Gluon mode
-    which uses partial workspaces.\"}"
+  upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 50ac96531b6358586ccfdf8cc845939bf50d9fab
+  fingerprint: 
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.7.1
-    minimumUnityVersion: 2021.3.0f1
+    minimumPackageVersion: 
+    minimumUnityVersion: 2017.1.0a1
 - packageId: com.unity.feature.2d@2.0.1
   testable: 0
   isDirectDependency: 1
@@ -404,10 +313,12 @@ m_ResolvedPackages:
     - 3.0.28
     - 3.0.31
     - 3.0.34
+    - 3.0.35
     compatible:
     - 3.0.31
     - 3.0.34
-    recommended: 3.0.34
+    - 3.0.35
+    recommended: 3.0.35
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -503,9 +414,11 @@ m_ResolvedPackages:
     - 2.0.20
     - 2.0.21
     - 2.0.22
+    - 2.0.23
     compatible:
     - 2.0.22
-    recommended: 2.0.22
+    - 2.0.23
+    recommended: 2.0.23
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -638,9 +551,11 @@ m_ResolvedPackages:
     - 1.12.0
     - 1.13.0
     - 1.13.1
+    - 1.14.0
     compatible:
     - 1.13.0
     - 1.13.1
+    - 1.14.0
     recommended: 1.13.1
     deprecated: []
   dependencies:
@@ -1642,16 +1557,20 @@ m_ResolvedPackages:
     - 1.7.6
     - 1.7.7
     - 1.7.8
+    - 1.8.0-pre.1
     - 1.8.0
     - 1.9.0
     - 1.9.1
     - 1.9.2
     - 1.9.4
     - 1.9.5
+    - 1.9.6
     compatible:
     - 1.9.5
-    recommended: 1.9.5
-    deprecated: []
+    - 1.9.6
+    recommended: 1.9.6
+    deprecated:
+    - 1.8.0-pre.1
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -5047,6 +4966,7 @@ m_ResolvedPackages:
     - 9.1.1
     - 9.1.2
     - 9.1.3
+    - 9.2.0
     - 10.0.0-pre.1
     - 10.0.0-pre.2
     - 10.0.0
@@ -5058,8 +4978,10 @@ m_ResolvedPackages:
     - 10.1.2
     - 10.1.3
     - 10.1.4
+    - 10.2.0
     compatible:
     - 10.1.4
+    - 10.2.0
     recommended: 10.1.4
     deprecated: []
   dependencies:
@@ -5203,8 +5125,10 @@ m_ResolvedPackages:
     - 5.0.1
     - 5.0.2
     - 5.0.3
+    - 5.1.0
     compatible:
     - 5.0.3
+    - 5.1.0
     recommended: 5.0.3
     deprecated: []
   dependencies: []
@@ -5347,6 +5271,7 @@ m_ResolvedPackages:
     - 8.0.3
     - 8.0.4
     - 8.0.5
+    - 8.1.0
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
@@ -5354,6 +5279,7 @@ m_ResolvedPackages:
     - 9.0.2
     - 9.0.3
     - 10.0.0
+    - 10.1.0
     compatible:
     - 9.0.3
     recommended: 9.0.3
@@ -5600,6 +5526,7 @@ m_ResolvedPackages:
     - 9.0.3
     - 9.0.4
     - 9.0.5
+    - 9.1.0
     - 10.0.0-pre.1
     - 10.0.0-pre.2
     - 10.0.0
@@ -5610,8 +5537,10 @@ m_ResolvedPackages:
     - 10.0.5
     - 10.0.6
     - 10.0.7
+    - 10.1.0
     compatible:
     - 10.0.7
+    - 10.1.0
     recommended: 10.0.7
     deprecated: []
   dependencies:
@@ -5851,6 +5780,7 @@ m_ResolvedPackages:
     - 4.0.2
     - 4.1.0
     - 4.2.1
+    - 4.3.0
     compatible:
     - 4.1.0
     recommended: 4.1.0
@@ -5961,6 +5891,7 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.2.1
     - 1.2.2
+    - 1.2.3
     compatible:
     - 1.1.8
     recommended: 1.1.8
@@ -6512,6 +6443,7 @@ m_ResolvedPackages:
     - 1.3.1
     - 1.4.0
     - 1.5.1
+    - 1.5.2
     - 2.1.0-exp.4
     - 2.1.0-pre.2
     - 2.1.0-pre.6
@@ -6535,10 +6467,12 @@ m_ResolvedPackages:
     - 2.5.1
     - 2.5.2
     - 2.5.3
+    - 2.6.0-exp.2
     compatible:
     - 2.5.1
     - 2.5.2
     - 2.5.3
+    - 2.6.0-exp.2
     recommended: 2.5.3
     deprecated: []
   dependencies:
@@ -6779,6 +6713,7 @@ m_ResolvedPackages:
     - 8.0.2
     - 8.0.3
     - 8.0.4
+    - 8.1.0
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
@@ -6789,8 +6724,10 @@ m_ResolvedPackages:
     - 9.0.5
     - 9.0.6
     - 9.0.7
+    - 9.1.0
     compatible:
     - 9.0.7
+    - 9.1.0
     recommended: 9.0.7
     deprecated: []
   dependencies:

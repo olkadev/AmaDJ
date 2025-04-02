@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,17 @@ public class VolumeController : MonoBehaviour
     [SerializeField] private TMP_Text volumeText;
     [SerializeField] private TMP_Text boostText;
     [SerializeField] private Button boostButton;
+    [Header("Color")]
+    [SerializeField] private Color boostButtonSelectedColor;
+    private Color boostButtonNormalColor;
 
     private bool isVolumeBoosted;
-    
+
+    private void Start()
+    {
+        boostButtonNormalColor = boostButton.image.color;
+    }
+
     private void Update()
     {
         ControlVolume();
@@ -24,11 +33,11 @@ public class VolumeController : MonoBehaviour
         isVolumeBoosted = boostSlider.gameObject.activeSelf;
         if (boostSlider.gameObject.activeSelf)
         {
-            boostButton.image.color = new Color(0.7882353f,0.3686134f,0.3647059f, 1);
+            boostButton.image.color = boostButtonSelectedColor;
         }
         else
         {
-            boostButton.image.color = Color.white;
+            boostButton.image.color = boostButtonNormalColor;
         }
 
         boostSlider.value = 0;

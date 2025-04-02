@@ -1,17 +1,28 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="EscapeManager" preserve="nothing"/>
+		<type fullname="ButtonSprite" preserve="nothing"/>
+		<type fullname="FadingColor" preserve="nothing"/>
+		<type fullname="Goodbye" preserve="nothing"/>
 		<type fullname="MenusManager" preserve="nothing"/>
 		<type fullname="MusicPlayer" preserve="nothing"/>
 		<type fullname="SaveSong" preserve="nothing"/>
-		<type fullname="ScreenMode" preserve="nothing"/>
+		<type fullname="ScreenManager" preserve="nothing"/>
+		<type fullname="SettingsManager" preserve="nothing"/>
 		<type fullname="SFXButton" preserve="nothing"/>
 		<type fullname="SFXButtonManager" preserve="nothing"/>
 		<type fullname="Song" preserve="nothing"/>
 		<type fullname="SongManager" preserve="nothing"/>
+		<type fullname="SortingButtonColors" preserve="nothing"/>
 		<type fullname="SoundDestroyer" preserve="nothing"/>
 		<type fullname="SoundEffectSO" preserve="nothing"/>
+		<type fullname="TextScrolling" preserve="nothing"/>
 		<type fullname="VolumeController" preserve="nothing"/>
+		<type fullname="Welcome" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Coffee.SoftMaskForUGUI">
+		<type fullname="Coffee.UISoftMask.SoftMask" preserve="nothing"/>
+		<type fullname="Coffee.UISoftMask.SoftMaskable" preserve="nothing"/>
+		<type fullname="Coffee.UISoftMask.UISoftMaskProjectSettings" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.Animation.Runtime">
 		<type fullname="UnityEngine.U2D.Animation.BufferManager" preserve="nothing"/>
@@ -129,6 +140,7 @@
 		<type fullname="UnityEngine.Rendering.GraphicsSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Shader" preserve="nothing"/>
+		<type fullname="UnityEngine.ShaderVariantCollection" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.TextAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>

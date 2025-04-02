@@ -6,17 +6,17 @@
   "inputs": [
     "C:\\Projects\\DJ Music Player\\Packages\\manifest.json",
     "C:\\Projects\\DJ Music Player\\Packages\\packages-lock.json",
-    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.40f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.40f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1",
+    "C:\\Users\\olibu\\Downloads\\Packages\\src\\package.json"
   ],
   "outputs": {
-    "com.unity.collab-proxy@2.7.1": {
-      "name": "com.unity.collab-proxy",
-      "displayName": "Version Control",
-      "resolvedPath": "C:\\Projects\\DJ Music Player\\Library\\PackageCache\\com.unity.collab-proxy@50ac96531b63",
-      "fingerprint": "50ac96531b6358586ccfdf8cc845939bf50d9fab",
-      "editorCompatibility": "2021.3.0f1",
-      "version": "2.7.1",
-      "source": "registry",
+    "com.coffee.softmask-for-ugui@file:C:\\Users\\olibu\\Downloads\\Packages\\src": {
+      "name": "com.coffee.softmask-for-ugui",
+      "displayName": "UI Soft Mask",
+      "resolvedPath": "C:\\Users\\olibu\\Downloads\\Packages\\src",
+      "editorCompatibility": "2017.1.0a1",
+      "version": "3.3.0",
+      "source": "local",
       "testable": false
     },
     "com.unity.feature.2d@2.0.1": {

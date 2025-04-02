@@ -1,18 +1,28 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - EscapeManager
+    - ButtonSprite
+    - FadingColor
+    - Goodbye
     - MenusManager
     - MusicPlayer
     - SFXButton
     - SFXButtonManager
     - SaveSong
-    - ScreenMode
+    - ScreenManager
+    - SettingsManager
     - Song
     - SongManager
+    - SortingButtonColors
     - SoundDestroyer
     - SoundEffectSO
+    - TextScrolling
     - VolumeController
+    - Welcome
+    Coffee.SoftMaskForUGUI.dll:
+    - Coffee.UISoftMask.SoftMask
+    - Coffee.UISoftMask.SoftMaskable
+    - Coffee.UISoftMask.UISoftMaskProjectSettings
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -158,6 +168,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
+    Coffee.SoftMaskForUGUI:
+    - Coffee.UISoftMaskInternal.MinMax01
+    - Coffee.UISoftMaskInternal.ShaderVariantRegistry
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -230,7 +243,11 @@ ScriptsOnlyBuild:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
+    - TMPro.GlyphAnchorPoint
     - TMPro.KerningTable
+    - TMPro.LigatureSubstitutionRecord
+    - TMPro.MarkPositionAdjustment
+    - TMPro.MarkToBaseAdjustmentRecord
     - TMPro.TMP_Character
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
@@ -287,6 +304,21 @@ ScriptsOnlyBuild:
     fullTypeName: SFXButton
     methodName: PlayButtonSound
   - assembly: Assembly-CSharp
+    fullTypeName: Song
+    methodName: QueueUpButton
+  - assembly: Assembly-CSharp
+    fullTypeName: Song
+    methodName: PlayNowButton
+  - assembly: Assembly-CSharp
+    fullTypeName: Song
+    methodName: DeleteButtonToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: Song
+    methodName: DeleteBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: Song
+    methodName: EditBtn
+  - assembly: Assembly-CSharp
     fullTypeName: SFXButton
     methodName: PlayButtonSound
   - assembly: Assembly-CSharp
@@ -312,18 +344,18 @@ ScriptsOnlyBuild:
     methodName: DeleteBtn
   - assembly: Assembly-CSharp
     fullTypeName: Song
+    methodName: QueueUpButton
+  - assembly: Assembly-CSharp
+    fullTypeName: Song
     methodName: PlayNowButton
   - assembly: Assembly-CSharp
     fullTypeName: Song
     methodName: DeleteButtonToggle
   - assembly: Assembly-CSharp
-    fullTypeName: Song
-    methodName: QueueUpButton
-  - assembly: Assembly-CSharp
     fullTypeName: MenusManager
     methodName: ToggleConfirmationCanvas
   - assembly: Assembly-CSharp
-    fullTypeName: EscapeManager
+    fullTypeName: SettingsManager
     methodName: ModifyFadeTime
   - assembly: Assembly-CSharp
     fullTypeName: MenusManager
@@ -347,8 +379,8 @@ ScriptsOnlyBuild:
     fullTypeName: SaveSong
     methodName: ImportMusicFileBtn
   - assembly: Assembly-CSharp
-    fullTypeName: ScreenMode
-    methodName: ToggleScreenMode
+    fullTypeName: MenusManager
+    methodName: ToggleEscapeMenu
   - assembly: Assembly-CSharp
     fullTypeName: MusicPlayer
     methodName: SkipToQueued
@@ -383,11 +415,14 @@ ScriptsOnlyBuild:
     fullTypeName: VolumeController
     methodName: ToggleBoostedVolume
   - assembly: Assembly-CSharp
-    fullTypeName: EscapeManager
+    fullTypeName: SettingsManager
     methodName: ModifyCrossFadeTime
   - assembly: Assembly-CSharp
     fullTypeName: MenusManager
     methodName: ToggleAutoplayTagBar
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenManager
+    methodName: ToggleScreenMode
   - assembly: Assembly-CSharp
     fullTypeName: MenusManager
     methodName: ToggleConfirmationCanvas
@@ -401,7 +436,7 @@ ScriptsOnlyBuild:
     fullTypeName: SongManager
     methodName: SearchAll
   - assembly: Assembly-CSharp
-    fullTypeName: EscapeManager
+    fullTypeName: Goodbye
     methodName: QuitApplicationBtn
   - assembly: Assembly-CSharp
     fullTypeName: VolumeController
@@ -413,7 +448,7 @@ ScriptsOnlyBuild:
     fullTypeName: SongManager
     methodName: SortByAuthorBtn
   - assembly: Assembly-CSharp
-    fullTypeName: EscapeManager
+    fullTypeName: SettingsManager
     methodName: DeleteAllSongsBtn
   - assembly: Assembly-CSharp
     fullTypeName: MenusManager
@@ -485,147 +520,163 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 31500}
+      Script: {instanceID: 30984}
     - Class: 114
-      Script: {instanceID: 31674}
+      Script: {instanceID: 31142}
     - Class: 114
-      Script: {instanceID: 31798}
+      Script: {instanceID: 31258}
     - Class: 114
-      Script: {instanceID: 31948}
+      Script: {instanceID: 31406}
     - Class: 114
-      Script: {instanceID: 32202}
+      Script: {instanceID: 31652}
     - Class: 114
-      Script: {instanceID: 32362}
+      Script: {instanceID: 31802}
     - Class: 114
-      Script: {instanceID: 32370}
+      Script: {instanceID: 31812}
     - Class: 114
-      Script: {instanceID: 32486}
+      Script: {instanceID: 31928}
     - Class: 114
-      Script: {instanceID: 32628}
+      Script: {instanceID: 32054}
     - Class: 114
-      Script: {instanceID: 32640}
+      Script: {instanceID: 32066}
     - Class: 114
-      Script: {instanceID: 32698}
+      Script: {instanceID: 32120}
     - Class: 114
-      Script: {instanceID: 32844}
+      Script: {instanceID: 32252}
     - Class: 114
-      Script: {instanceID: 33110}
+      Script: {instanceID: 32508}
     - Class: 114
-      Script: {instanceID: 33194}
+      Script: {instanceID: 32584}
     - Class: 114
-      Script: {instanceID: 33336}
+      Script: {instanceID: 32728}
+    - Class: 114
+      Script: {instanceID: 32918}
+    - Class: 114
+      Script: {instanceID: 32922}
+    - Class: 114
+      Script: {instanceID: 33084}
+    - Class: 114
+      Script: {instanceID: 33142}
+    - Class: 114
+      Script: {instanceID: 33296}
+    - Class: 114
+      Script: {instanceID: 33340}
+    - Class: 114
+      Script: {instanceID: 33474}
     - Class: 114
       Script: {instanceID: 33534}
     - Class: 114
-      Script: {instanceID: 33706}
+      Script: {instanceID: 33630}
     - Class: 114
-      Script: {instanceID: 33766}
+      Script: {instanceID: 33666}
     - Class: 114
-      Script: {instanceID: 33934}
+      Script: {instanceID: 33712}
     - Class: 114
-      Script: {instanceID: 34114}
+      Script: {instanceID: 33748}
     - Class: 114
-      Script: {instanceID: 34174}
+      Script: {instanceID: 33782}
     - Class: 114
-      Script: {instanceID: 34272}
+      Script: {instanceID: 34400}
     - Class: 114
-      Script: {instanceID: 34308}
+      Script: {instanceID: 34662}
     - Class: 114
-      Script: {instanceID: 34368}
+      Script: {instanceID: 34850}
     - Class: 114
-      Script: {instanceID: 34398}
+      Script: {instanceID: 34976}
     - Class: 114
-      Script: {instanceID: 34434}
+      Script: {instanceID: 35704}
     - Class: 114
-      Script: {instanceID: 35348}
+      Script: {instanceID: 35758}
     - Class: 114
-      Script: {instanceID: 35554}
+      Script: {instanceID: 36022}
     - Class: 114
-      Script: {instanceID: 35686}
+      Script: {instanceID: 36122}
     - Class: 114
-      Script: {instanceID: 36450}
+      Script: {instanceID: 36188}
     - Class: 114
-      Script: {instanceID: 36504}
+      Script: {instanceID: 36260}
     - Class: 114
-      Script: {instanceID: 36792}
+      Script: {instanceID: 36296}
     - Class: 114
-      Script: {instanceID: 36892}
+      Script: {instanceID: 36360}
     - Class: 114
-      Script: {instanceID: 36962}
+      Script: {instanceID: 36464}
     - Class: 114
-      Script: {instanceID: 37044}
+      Script: {instanceID: 37094}
     - Class: 114
-      Script: {instanceID: 37142}
+      Script: {instanceID: 37294}
     - Class: 114
-      Script: {instanceID: 37258}
+      Script: {instanceID: 37316}
     - Class: 114
-      Script: {instanceID: 37914}
+      Script: {instanceID: 37390}
     - Class: 114
-      Script: {instanceID: 38122}
+      Script: {instanceID: 37392}
     - Class: 114
-      Script: {instanceID: 38148}
+      Script: {instanceID: 37650}
     - Class: 114
-      Script: {instanceID: 38228}
+      Script: {instanceID: 38400}
     - Class: 114
-      Script: {instanceID: 38230}
+      Script: {instanceID: 38404}
     - Class: 114
-      Script: {instanceID: 38500}
+      Script: {instanceID: 38426}
     - Class: 114
-      Script: {instanceID: 39270}
+      Script: {instanceID: 38464}
     - Class: 114
-      Script: {instanceID: 39294}
+      Script: {instanceID: 39010}
     - Class: 114
-      Script: {instanceID: 39332}
+      Script: {instanceID: 39028}
     - Class: 114
-      Script: {instanceID: 39900}
+      Script: {instanceID: 39458}
     - Class: 114
-      Script: {instanceID: 39918}
+      Script: {instanceID: 39864}
     - Class: 114
-      Script: {instanceID: 40372}
+      Script: {instanceID: 39938}
     - Class: 114
-      Script: {instanceID: 40796}
+      Script: {instanceID: 39990}
     - Class: 114
-      Script: {instanceID: 40870}
+      Script: {instanceID: 40034}
     - Class: 114
-      Script: {instanceID: 40968}
+      Script: {instanceID: 40446}
     - Class: 114
-      Script: {instanceID: 41408}
+      Script: {instanceID: 40502}
     - Class: 114
-      Script: {instanceID: 41464}
+      Script: {instanceID: 40688}
     - Class: 114
-      Script: {instanceID: 41650}
+      Script: {instanceID: 40786}
     - Class: 114
-      Script: {instanceID: 41754}
+      Script: {instanceID: 40868}
     - Class: 114
-      Script: {instanceID: 41836}
+      Script: {instanceID: 40962}
     - Class: 114
-      Script: {instanceID: 41936}
+      Script: {instanceID: 41382}
     - Class: 114
-      Script: {instanceID: 42386}
+      Script: {instanceID: 41402}
     - Class: 114
-      Script: {instanceID: 42502}
+      Script: {instanceID: 41520}
     - Class: 114
-      Script: {instanceID: 42520}
+      Script: {instanceID: 41538}
     - Class: 114
-      Script: {instanceID: 42610}
+      Script: {instanceID: 41628}
     - Class: 114
-      Script: {instanceID: 42750}
+      Script: {instanceID: 41760}
     - Class: 114
-      Script: {instanceID: 42840}
+      Script: {instanceID: 41844}
     - Class: 114
-      Script: {instanceID: 42868}
+      Script: {instanceID: 41870}
     - Class: 114
-      Script: {instanceID: 43040}
+      Script: {instanceID: 42040}
     - Class: 114
-      Script: {instanceID: 43320}
+      Script: {instanceID: 42322}
     - Class: 114
-      Script: {instanceID: 43408}
+      Script: {instanceID: 42406}
     - Class: 114
-      Script: {instanceID: 43648}
+      Script: {instanceID: 42634}
     - Class: 114
-      Script: {instanceID: 43830}
+      Script: {instanceID: 42804}
     - Class: 114
-      Script: {instanceID: 43916}
+      Script: {instanceID: 42886}
+    - Class: 114
+      Script: {instanceID: 43380}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -785,6 +836,12 @@ ScriptsOnlyBuild:
     className: InputSystemUIInputModule
   - hash:
       serializedVersion: 2
+      Hash: 05e5c8531b11271e9325869f213e530a
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: MaskingShapeContainer
+  - hash:
+      serializedVersion: 2
       Hash: 8b15e35eb98fc258ec2e839df7c3c9b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -867,6 +924,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: Volume
+  - hash:
+      serializedVersion: 2
+      Hash: 3e4fc3aedb163cac6906116aff52d410
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: UISoftMaskProjectSettings
   - hash:
       serializedVersion: 2
       Hash: da281dc879c7932e0c9669da88ae40c0
@@ -1013,10 +1076,10 @@ ScriptsOnlyBuild:
     className: IsometricRuleTile
   - hash:
       serializedVersion: 2
-      Hash: 9f0eb6ff95e1674899c56c6aadac85d9
+      Hash: fbbf84b9f45df149dee2bf0294250f51
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: ScreenMode
+    className: ScreenManager
   - hash:
       serializedVersion: 2
       Hash: c4de0ff7e075dd89c9fed5913dd775d2
@@ -1059,6 +1122,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4541f2ea3808c5648d4826b52a095db4
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: SoftMask
   - hash:
       serializedVersion: 2
       Hash: 9104447b683bf70406fa01f12ecb564a
@@ -1143,6 +1212,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: 
     className: DownloadableSample
+  - hash:
+      serializedVersion: 2
+      Hash: cbe60e97a39c157f4ebcb8fecc936f3a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FadingColor
   - hash:
       serializedVersion: 2
       Hash: afb7b65d28d5a7423e69a1b076be0064
@@ -1323,6 +1398,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: ef1d8ad7e19309f095c20a7d17a76b45
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TextScrolling
   - hash:
       serializedVersion: 2
       Hash: 08e2446b65d2da7600c6bbdd36de0e56
@@ -1517,6 +1598,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerObject
   - hash:
       serializedVersion: 2
+      Hash: a65ada1387ca77d314567c9ebcffb84d
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: CanvasViewChangeTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 5c2a5af4658ede896d072a8a641d706e
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -1631,6 +1718,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 2b63a28aea43510b7b3060d77a877def
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Goodbye
+  - hash:
+      serializedVersion: 2
       Hash: fd7983aadddd0b1b9f4ce82ed537bde5
     assemblyName: Unity.2D.SpriteShape.Runtime
     namespaceName: UnityEngine.U2D
@@ -1727,7 +1820,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVBox
   - hash:
       serializedVersion: 2
-      Hash: dc7ca76d15f30d764cafa64bbe5a170e
+      Hash: 7c7c66545ea17357825aa62cfa196f26
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MenusManager
@@ -1811,6 +1904,12 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 0b0060088e409de9f10b70776b53aa1a
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: RectTransformFitter
+  - hash:
+      serializedVersion: 2
       Hash: 7e12302f66e3c8ed5bcfea4ce65fccea
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1869,6 +1968,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.2D.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ShadowCaster2D
+  - hash:
+      serializedVersion: 2
+      Hash: 2540500a06dfe111b55bae7d543b782b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SortingButtonColors
   - hash:
       serializedVersion: 2
       Hash: 210b7a8166df8f75216fd75ded8a60e1
@@ -2045,6 +2150,12 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
+      Hash: dc1662aa9025016820e870519323fa71
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: MaskingShape
+  - hash:
+      serializedVersion: 2
       Hash: af770ad771658627851c64eafbf797f0
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
@@ -2099,16 +2210,22 @@ ScriptsOnlyBuild:
     className: ChatController
   - hash:
       serializedVersion: 2
-      Hash: 25ee6274078b2cf35a97bc9ff18dd348
+      Hash: acb99f7f5c683e431649a4258e7687cd
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: EscapeManager
+    className: SettingsManager
   - hash:
       serializedVersion: 2
       Hash: 9dc274eab7228631e90d4757b13b768a
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ShadowsMidtonesHighlights
+  - hash:
+      serializedVersion: 2
+      Hash: 5f19fb28a33a4ab2b718999ece066b17
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonSprite
   - hash:
       serializedVersion: 2
       Hash: 049f6aa84fe1cb5359c9338e96d0b07e
@@ -2163,6 +2280,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f8d096aad0b8fd601d49104d582245b7
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: AlphaHitTestTarget
   - hash:
       serializedVersion: 2
       Hash: dcee4d9fe748bbd34b975495e72312c4
@@ -2331,6 +2454,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: AnimatorMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1cc18a806f40e50a30efe008a5d9dc5f
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: TerminalMaskingShape
+  - hash:
+      serializedVersion: 2
+      Hash: 88b5e84e7adb52a0bca65c3882c324a6
+    assemblyName: Coffee.SoftMaskForUGUI
+    namespaceName: Coffee.UISoftMask
+    className: SoftMaskable
   - hash:
       serializedVersion: 2
       Hash: 11a492830b189fafb9ed2f7afa464c56
@@ -2561,7 +2696,7 @@ ScriptsOnlyBuild:
     className: ProbeAdjustmentVolume
   - hash:
       serializedVersion: 2
-      Hash: 5e12c2758c0ebadb9bc8ae32e3a0e1a4
+      Hash: 5d2361cfc869fdfce10b23a40104d050
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: VolumeController
@@ -2631,7 +2766,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a01911252c0ef8f777bd68ecfce78dfb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Welcome
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Scene.unity
-  playerPath: C:/Projects/Builds/DJMusicPlayer/DJ Music Player - Functional.exe
+  playerPath: C:/Projects/Builds/AmaDJ/DJ Music Player - Functional.exe

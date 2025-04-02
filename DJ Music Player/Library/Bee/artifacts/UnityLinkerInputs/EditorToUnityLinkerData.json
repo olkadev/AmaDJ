@@ -9,6 +9,34 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ButtonSprite",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Coffee.SoftMaskForUGUI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Coffee.UISoftMask.SoftMask",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Coffee.SoftMaskForUGUI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Coffee.UISoftMask.SoftMaskable",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Coffee.SoftMaskForUGUI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Coffee.UISoftMask.UISoftMaskProjectSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -27,7 +55,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "EscapeManager",
+            "fullManagedTypeName": "FadingColor",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -45,6 +73,13 @@
             "nativeClass": "GlobalGameManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Goodbye",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -133,7 +168,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "ScreenMode",
+            "fullManagedTypeName": "ScreenManager",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SettingsManager",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -175,6 +217,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "SortingButtonColors",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "SoundDestroyer",
             "moduleName": "",
             "usedInScenes": []
@@ -191,6 +240,13 @@
             "nativeClass": "StreamingManager",
             "fullManagedTypeName": "",
             "moduleName": "Streaming",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TextScrolling",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -967,6 +1023,13 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ShaderVariantCollection",
+            "fullManagedTypeName": "UnityEngine.ShaderVariantCollection",
+            "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Sprite",
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
@@ -1147,6 +1210,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "VolumeController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Welcome",
             "moduleName": "",
             "usedInScenes": []
         }
