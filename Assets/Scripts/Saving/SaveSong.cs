@@ -38,6 +38,10 @@ public class SaveSong : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.GetInt("TotalMusic") < 0)
+        {
+            PlayerPrefs.SetInt("TotalMusic", 1);
+        }
         _totalMusic = PlayerPrefs.GetInt("TotalMusic");
     }
 

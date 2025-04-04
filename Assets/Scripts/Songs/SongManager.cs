@@ -98,8 +98,13 @@ public class SongManager : MonoBehaviour
     
     public void RemoveSong(int index)
     {
-        _songs.RemoveAt(index);
-        _songs.Sort((a, b) => a.GetSongIndex().CompareTo(b.GetSongIndex()));
+        for (int i = 0; i < _songs.Count; i++)
+        {
+            if (_songs[i].GetSongIndex() == index)
+            {
+                _songs.RemoveAt(i);
+            }
+        }
         HandleSorting();
     }
     
