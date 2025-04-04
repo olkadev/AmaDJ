@@ -43,6 +43,11 @@ A minimalist Unity-based music player designed for amateur DJs. Features seamles
    3. If you want the music to loop, you can click on the loop button below the music progress bar.
    4. You can also start autoplaying music by expanding the autoplay option and typing in a tag. When active, it will randomly pick and play songs with the exact same tag.
 
+## 🔊 Supported Audio Types
+- **mp3**
+- **wav**
+- **ogg**
+
 ## 🔑 Hotkeys
 | Action  | Shortcut |
 | ------------- | ------------- |
