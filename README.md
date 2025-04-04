@@ -43,7 +43,7 @@ A minimalist Unity-based music player designed for amateur DJs. Features seamles
    3. If you want the music to loop, you can click on the loop button below the music progress bar.
    4. You can also start autoplaying music by expanding the autoplay option and typing in a tag. When active, it will randomly pick and play songs with the exact same tag.
 
-## Hotkeys
+## 🔑 Hotkeys
 | Action  | Shortcut |
 | ------------- | ------------- |
 | Play/Pause  | Spacebar  |
@@ -54,6 +54,12 @@ A minimalist Unity-based music player designed for amateur DJs. Features seamles
 | Maximize Volume | Ctrl + ↑ |
 | Minimize Volume | Ctrl + ↓ |
 | Settings | Esc |
+
+## ☕ Support the Project
+
+If you find AmaDJ useful, consider donating to support future development ❤️
+
+[![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-FF5E5B.svg?style=flat-square)](https://ko-fi.com/olkadev)
 
 📄 **License**  
 [MIT](LICENSE) - Free to use, modify, and distribute  
